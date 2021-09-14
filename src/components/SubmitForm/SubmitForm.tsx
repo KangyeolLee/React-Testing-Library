@@ -20,8 +20,13 @@ const SubmitForm = () => {
     }
   };
 
+  const handleSubmitForm = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log("제출합니다~");
+  };
+
   return (
-    <form>
+    <form onSubmit={handleSubmitForm}>
       <label htmlFor="email">
         이메일
         <input
