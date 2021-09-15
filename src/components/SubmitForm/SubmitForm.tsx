@@ -27,7 +27,7 @@ const SubmitForm = () => {
 
   return (
     <form onSubmit={handleSubmitForm}>
-      <label htmlFor="email">
+      <label>
         이메일
         <input
           name="email"
@@ -38,7 +38,7 @@ const SubmitForm = () => {
         />
       </label>
 
-      <label htmlFor="password">
+      <label>
         비밀번호
         <input
           name="password"
