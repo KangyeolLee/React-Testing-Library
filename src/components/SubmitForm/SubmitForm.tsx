@@ -1,4 +1,5 @@
 import { useState } from "react";
+import * as S from "./styles";
 
 const SubmitForm = () => {
   const [email, setEmail] = useState("");
@@ -22,11 +23,11 @@ const SubmitForm = () => {
 
   const handleSubmitForm = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("제출합니다~");
+    alert("제출합니다~");
   };
 
   return (
-    <form onSubmit={handleSubmitForm}>
+    <S.SubmitForm onSubmit={handleSubmitForm}>
       <label>
         이메일
         <input
@@ -50,7 +51,7 @@ const SubmitForm = () => {
       </label>
 
       <button disabled={!email || !password}>로그인</button>
-    </form>
+    </S.SubmitForm>
   );
 };
 
