@@ -1,12 +1,11 @@
-import NotFound from "@/components/NotFound/NotFound";
 import SubmitForm from "@/components/SubmitForm";
+import * as S from "./styles";
 
 const Home = () => {
   return (
-    <>
-      <NotFound />
+    <S.Home>
       <SubmitForm />
-    </>
+    </S.Home>
   );
 };
 
