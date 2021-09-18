@@ -1,5 +1,5 @@
-import NotFound from "../../components/NotFound/NotFound";
-import SubmitForm from "../../components/SubmitForm";
+import NotFound from "@/components/NotFound/NotFound";
+import SubmitForm from "@/components/SubmitForm";
 
 const Home = () => {
   return (
