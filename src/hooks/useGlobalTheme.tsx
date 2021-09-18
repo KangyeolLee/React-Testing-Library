@@ -15,7 +15,7 @@ const useGlobalTheme = () => {
     localStorage.setItem("theme", _theme);
   };
 
-  return [themeMode, toggleMode] as const;
+  return [themeMode, toggleMode, theme] as const;
 };
 
 export default useGlobalTheme;
