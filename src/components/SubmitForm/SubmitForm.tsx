@@ -28,29 +28,29 @@ const SubmitForm = () => {
 
   return (
     <S.SubmitForm onSubmit={handleSubmitForm}>
-      <label>
-        이메일
-        <input
+      <S.Label>
+        <span className="label-text">이메일</span>
+        <S.Input
           name="email"
           type="email"
           placeholder="이메일 입력"
           value={email}
           onChange={(e) => handleOnChangeInput(e)}
         />
-      </label>
+      </S.Label>
 
-      <label>
-        비밀번호
-        <input
+      <S.Label>
+        <span className="label-text">비밀번호</span>
+        <S.Input
           name="password"
           type="password"
           placeholder="비밀번호 입력"
           value={password}
           onChange={(e) => handleOnChangeInput(e)}
         />
-      </label>
+      </S.Label>
 
-      <button disabled={!email || !password}>로그인</button>
+      <S.LoginButton disabled={!email || !password}>로그인</S.LoginButton>
     </S.SubmitForm>
   );
 };
