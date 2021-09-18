@@ -9,6 +9,14 @@ const GlobalStyle = createGlobalStyle`
     margin: auto;
     padding: 0 2rem;
   }
+
+  .touchable {
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.75;
+    }
+  }
 `;
 
 export default GlobalStyle;
