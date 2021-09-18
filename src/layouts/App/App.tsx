@@ -5,6 +5,7 @@ import * as S from "./styles";
 import { ReactComponent as DarkModeIcon } from "@/assets/darkmode.svg";
 import { ReactComponent as LightModeIcon } from "@/assets/lightmode.svg";
 import { THEME } from "@/constants/styles";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 function App() {
   const [theme, setTheme, themeString] = useGlobalTheme();
@@ -12,7 +13,11 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <S.App>
-        <Home />
+        <BrowserRouter>
+          <Switch>
+            <Route exact path="/" component={Home} />
+          </Switch>
+        </BrowserRouter>
         <S.ThemeChanger className="touchable" onClick={setTheme}>
           {themeString === THEME.dark ? <DarkModeIcon /> : <LightModeIcon />}
         </S.ThemeChanger>
