@@ -1,5 +1,9 @@
 import * as S from "./styles";
 
+import box from "@/assets/box.png";
+import car from "@/assets/car.png";
+import error from "@/assets/404error.png";
+
 const Home = () => {
   return (
     <S.Home className="container">
@@ -13,6 +17,7 @@ const Home = () => {
             <span>제출 관련 이벤트를</span>
             <span>테스트합니다.</span>
           </S.HiddenContent>
+          <img src={box} alt="폼 제출 이미지" />
         </S.HomeCard>
         <S.HomeCard bgColor="#f4b400">
           <span className="article-title">데이터 불러오기</span>
@@ -22,6 +27,7 @@ const Home = () => {
             <span>로딩/에러처리 관련 내용을</span>
             <span>테스트합니다.</span>
           </S.HiddenContent>
+          <img src={car} alt="데이터 불러오기 이미지" />
         </S.HomeCard>
         <S.HomeCard bgColor="#1e48ff">
           <span className="article-title">잘못된 페이지 요청</span>
@@ -31,6 +37,7 @@ const Home = () => {
             <span>출력하는 페이지를</span>
             <span>테스트합니다.</span>
           </S.HiddenContent>
+          <img src={error} alt="잘못된 페이지 요청 이미지" />
         </S.HomeCard>
       </div>
     </S.Home>

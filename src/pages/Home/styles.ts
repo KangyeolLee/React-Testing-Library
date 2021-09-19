@@ -34,9 +34,11 @@ export const HiddenContent = styled.div`
   opacity: 0;
   color: #fff;
   transition: opacity 0.45s ease-in-out, transform 0.3s ease-in-out;
+  z-index: 10;
 `;
 
 export const HomeCard = styled.article<CardProps>`
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -64,5 +66,17 @@ export const HomeCard = styled.article<CardProps>`
       opacity: 1;
       transform: translateY(0);
     }
+
+    img {
+      opacity: 0.55;
+    }
+  }
+
+  img {
+    transition: opacity 0.45s ease-in-out;
+    position: absolute;
+    width: 100%;
+    bottom: 1rem;
+    left: 0;
   }
 `;
