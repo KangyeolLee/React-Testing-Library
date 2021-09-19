@@ -25,6 +25,8 @@ export const Home = styled.section`
     gap: 1rem;
 
     a {
+      max-width: 20rem;
+      height: 30rem;
       position: relative;
       text-decoration: none;
     }
@@ -49,8 +51,7 @@ export const HomeCard = styled.article<CardProps>`
   border-radius: 1rem;
   background-color: ${({ bgColor }) => bgColor};
   width: 100%;
-  max-width: 20rem;
-  height: 30rem;
+  height: 100%;
   box-sizing: border-box;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;

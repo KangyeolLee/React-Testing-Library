@@ -41,7 +41,7 @@ const Home = () => {
             <span className="article-title">잘못된 페이지 요청</span>
             <S.HiddenContent>
               <span>경로에 맞지 않는 페이지</span>
-              <span>잘못된 요청이 올 경우</span>
+              <span>또는 잘못된 요청이 올 경우</span>
               <span>출력하는 페이지를</span>
               <span>테스트합니다.</span>
             </S.HiddenContent>
