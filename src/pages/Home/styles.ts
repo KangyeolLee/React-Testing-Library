@@ -20,10 +20,14 @@ export const Home = styled.section`
 
   .card-wrapper {
     width: 100%;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    align-items: center;
-    justify-content: center;
+
+    a {
+      position: relative;
+      text-decoration: none;
+    }
   }
 `;
 export const HiddenContent = styled.div`
@@ -38,14 +42,13 @@ export const HiddenContent = styled.div`
 `;
 
 export const HomeCard = styled.article<CardProps>`
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   padding: 2rem;
   border-radius: 1rem;
   background-color: ${({ bgColor }) => bgColor};
-  width: 33%;
+  width: 100%;
   max-width: 20rem;
   height: 30rem;
   box-sizing: border-box;
