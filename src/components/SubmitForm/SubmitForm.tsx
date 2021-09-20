@@ -1,6 +1,6 @@
 import * as S from "./styles";
 
-import { Link } from "react-router-dom";
+import Header from "@/components/Header";
 import form from "@/assets/form.png";
 import { useState } from "react";
 
@@ -31,12 +31,7 @@ const SubmitForm = () => {
 
   return (
     <S.Section className="container">
-      <div className="header-wrapper">
-        <h1 className="section-title">폼 제출 테스트</h1>
-        <Link className="touchable" to="/">
-          홈으로
-        </Link>
-      </div>
+      <Header title="폼 제출 테스트" />
 
       <div className="article-wrapper">
         <S.Article>

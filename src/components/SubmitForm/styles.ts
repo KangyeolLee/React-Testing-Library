@@ -1,25 +1,6 @@
 import styled from "styled-components";
 
 export const Section = styled.section`
-  .header-wrapper {
-    display: flex;
-    justify-content: space-between;
-
-    h1 {
-      font-size: 1.5rem;
-      color: ${({ theme }) => theme.color.text};
-      font-family: "Nanum Gothic", sans-serif;
-      font-weight: 700;
-      margin-bottom: 2rem;
-    }
-
-    a {
-      text-decoration: none;
-      color: ${({ theme }) => theme.color.text};
-      border-radius: 1rem;
-    }
-  }
-
   .article-wrapper {
     display: flex;
     gap: 2rem;

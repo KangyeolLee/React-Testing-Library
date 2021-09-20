@@ -5,23 +5,10 @@ import { lightMode } from "@/styles/theme";
 import renderComponent from "@/utils/test/renderComponent";
 
 describe("<SubmitForm />", () => {
-  it("header: render header contents", () => {
-    const { getByText } = renderComponent({
-      theme: lightMode,
-      JSXElement: SubmitForm,
-    });
-
-    const header = getByText(/폼 제출 테스트/);
-    const button = getByText(/홈으로/);
-
-    expect(header).toBeInTheDocument();
-    expect(button).toBeInTheDocument();
-  });
-
   it("render whole contents", () => {
     const { getByAltText, getByTestId } = renderComponent({
       theme: lightMode,
-      JSXElement: SubmitForm,
+      JSXElement: <SubmitForm />,
     });
 
     const image = getByAltText(/폼 관련 이미지/);
@@ -34,7 +21,7 @@ describe("<SubmitForm />", () => {
   it("form: enables button when both email and password are entered", () => {
     const { getByText, getByLabelText } = renderComponent({
       theme: lightMode,
-      JSXElement: SubmitForm,
+      JSXElement: <SubmitForm />,
     });
 
     const button = getByText("로그인");
