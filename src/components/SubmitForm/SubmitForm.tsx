@@ -1,5 +1,8 @@
-import { useState } from "react";
 import * as S from "./styles";
+
+import { Link } from "react-router-dom";
+import form from "@/assets/form.png";
+import { useState } from "react";
 
 const SubmitForm = () => {
   const [email, setEmail] = useState("");
@@ -27,31 +30,48 @@ const SubmitForm = () => {
   };
 
   return (
-    <S.SubmitForm onSubmit={handleSubmitForm}>
-      <S.Label>
-        <span className="label-text">이메일</span>
-        <S.Input
-          name="email"
-          type="email"
-          placeholder="이메일 입력"
-          value={email}
-          onChange={(e) => handleOnChangeInput(e)}
-        />
-      </S.Label>
+    <S.Section className="container">
+      <div className="header-wrapper">
+        <h1 className="section-title">폼 제출 테스트</h1>
+        <Link className="touchable" to="/">
+          홈으로
+        </Link>
+      </div>
 
-      <S.Label>
-        <span className="label-text">비밀번호</span>
-        <S.Input
-          name="password"
-          type="password"
-          placeholder="비밀번호 입력"
-          value={password}
-          onChange={(e) => handleOnChangeInput(e)}
-        />
-      </S.Label>
+      <div className="article-wrapper">
+        <S.Article>
+          <img draggable="false" src={form} alt="폼 관련 이미지" />
+        </S.Article>
 
-      <S.LoginButton disabled={!email || !password}>로그인</S.LoginButton>
-    </S.SubmitForm>
+        <S.Article>
+          <S.SubmitForm onSubmit={handleSubmitForm} data-testid="test-form">
+            <S.Label>
+              <span className="label-text">이메일</span>
+              <S.Input
+                name="email"
+                type="email"
+                placeholder="이메일 입력"
+                value={email}
+                onChange={(e) => handleOnChangeInput(e)}
+              />
+            </S.Label>
+
+            <S.Label>
+              <span className="label-text">비밀번호</span>
+              <S.Input
+                name="password"
+                type="password"
+                placeholder="비밀번호 입력"
+                value={password}
+                onChange={(e) => handleOnChangeInput(e)}
+              />
+            </S.Label>
+
+            <S.LoginButton disabled={!email || !password}>로그인</S.LoginButton>
+          </S.SubmitForm>
+        </S.Article>
+      </div>
+    </S.Section>
   );
 };
 
