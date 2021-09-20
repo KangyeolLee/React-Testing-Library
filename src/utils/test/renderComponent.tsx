@@ -6,7 +6,7 @@ import { render } from "@testing-library/react";
 
 type Props = {
   theme: DefaultTheme;
-  JSXElement: () => JSX.Element;
+  JSXElement: JSX.Element;
 };
 
 const renderComponent = ({ theme, JSXElement }: Props) => {
@@ -14,9 +14,7 @@ const renderComponent = ({ theme, JSXElement }: Props) => {
 
   return render(
     <ThemeProvider theme={theme}>
-      <Router history={history}>
-        <JSXElement />
-      </Router>
+      <Router history={history}>{JSXElement}</Router>
     </ThemeProvider>
   );
 };
