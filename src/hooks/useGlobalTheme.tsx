@@ -1,6 +1,7 @@
+import { darkMode, lightMode } from "@/styles/theme";
+
+import { THEME } from "@/constants/styles";
 import { useState } from "react";
-import { lightMode, darkMode } from "../styles/theme";
-import { THEME } from "../constants";
 
 const useGlobalTheme = () => {
   const localTheme =
