@@ -9,7 +9,7 @@ describe("<Home />", () => {
   it("render whole component", () => {
     const { container } = renderComponent({
       theme: lightMode,
-      JSXElement: Home,
+      JSXElement: <Home />,
     });
     expect(container).toBeInTheDocument();
   });
@@ -17,7 +17,7 @@ describe("<Home />", () => {
   it("render form card", () => {
     const { getByText, getByAltText } = renderComponent({
       theme: lightMode,
-      JSXElement: Home,
+      JSXElement: <Home />,
     });
 
     const title = getByText(/폼 제출/);
@@ -30,7 +30,7 @@ describe("<Home />", () => {
   it("render data card", () => {
     const { getByText, getByAltText } = renderComponent({
       theme: lightMode,
-      JSXElement: Home,
+      JSXElement: <Home />,
     });
 
     const title = getByText(/데이터 불러오기/);
@@ -43,7 +43,7 @@ describe("<Home />", () => {
   it("render error card", () => {
     const { getByText, getByAltText } = renderComponent({
       theme: lightMode,
-      JSXElement: Home,
+      JSXElement: <Home />,
     });
 
     const title = getByText(/잘못된 페이지 요청/);
