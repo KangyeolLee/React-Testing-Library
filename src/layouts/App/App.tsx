@@ -1,6 +1,6 @@
 import * as S from "./styles";
 
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 import { ReactComponent as DarkModeIcon } from "@/assets/darkmode.svg";
 import Home from "@/pages/Home";
@@ -18,15 +18,17 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <S.App>
-        <BrowserRouter>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/submitForm" component={SubmitForm} />
-            <Route path="/loadData" component={LoadData} />
-            <Route component={NotFound} />
-          </Switch>
-        </BrowserRouter>
-        <S.ThemeChanger className="touchable" onClick={setTheme}>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/submitForm" component={SubmitForm} />
+          <Route path="/loadData" component={LoadData} />
+          <Route component={NotFound} />
+        </Switch>
+        <S.ThemeChanger
+          className="touchable"
+          data-testid="touchable"
+          onClick={setTheme}
+        >
           {themeString === THEME.dark ? <DarkModeIcon /> : <LightModeIcon />}
         </S.ThemeChanger>
       </S.App>
