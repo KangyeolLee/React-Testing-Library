@@ -44,7 +44,7 @@ export const Input = styled.input`
 
   &:focus {
     margin: -2px;
-    border: 2px solid #2ac1bc;
+    border: 2px solid #00a243;
   }
 `;
 
@@ -53,7 +53,7 @@ export const LoginButton = styled.button`
   border-radius: 1rem;
   font-size: 1.15rem;
   font-weight: 700;
-  background-color: #2ac1bc;
+  background-color: #00a243;
   color: #fff;
   border: none;
   outline: none;
@@ -69,6 +69,6 @@ export const LoginButton = styled.button`
   }
 
   &:hover {
-    opacity: 0.95;
+    opacity: 0.85;
   }
 `;
