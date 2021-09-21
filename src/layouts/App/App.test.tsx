@@ -34,30 +34,30 @@ describe("<App />", () => {
   it("check routing to form component", async () => {
     const { getByText, getByTestId } = renderComponent();
 
-    const formLink = getByTestId("form-link");
+    const formLink = await waitFor(() => getByTestId("form-link"));
     fireEvent.click(formLink);
 
     const title = await waitFor(() => getByText(/폼 제출 테스트/));
     expect(title).toBeInTheDocument();
   });
 
-  it("check routing to data component", () => {
+  it("check routing to data component", async () => {
     const { getByText, getByTestId } = renderComponent();
 
-    const dataLink = getByTestId("data-link");
+    const dataLink = await waitFor(() => getByTestId("data-link"));
     fireEvent.click(dataLink);
 
-    const title = getByText(/데이터 불러오기/);
+    const title = await waitFor(() => getByText(/데이터 불러오기/));
     expect(title).toBeInTheDocument();
   });
 
-  it("check routing to error component", () => {
+  it("check routing to error component", async () => {
     const { getByText, getByTestId } = renderComponent();
 
-    const errorLink = getByTestId("error-link");
+    const errorLink = await waitFor(() => getByTestId("error-link"));
     fireEvent.click(errorLink);
 
-    const title = getByText(/Page Not Found/i);
+    const title = await waitFor(() => getByText(/Page Not Found/i));
     expect(title).toBeInTheDocument();
   });
 });
