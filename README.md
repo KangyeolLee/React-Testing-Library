@@ -1,5 +1,19 @@
 # react-testing-libary
 
+### DEMO
+
+- `gh-pages`로 배포
+- 일일 API 호출 횟수 시간 당 60회 제한: 초과 시 에러 메시지 출력
+- [데모페이지](https://kangyeollee.github.io/React-Testing-Library/)
+
+### GIT CLONE
+
+- `.env.local` 생성
+- 깃허브 토큰 입력
+  ```
+  REACT_APP_GITHUB_TOKEN=my token
+  ```
+
 ### TEST
 
 - 테스트의 종류를 나열해보자면 다음과 같겠다.
