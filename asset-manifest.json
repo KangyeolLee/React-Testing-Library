@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.js": "/React-Testing-Library/static/js/main.0fb0ef0b.chunk.js",
+    "main.js.map": "/React-Testing-Library/static/js/main.0fb0ef0b.chunk.js.map",
+    "runtime-main.js": "/React-Testing-Library/static/js/runtime-main.231a8f32.js",
+    "runtime-main.js.map": "/React-Testing-Library/static/js/runtime-main.231a8f32.js.map",
+    "static/js/2.56b35ba4.chunk.js": "/React-Testing-Library/static/js/2.56b35ba4.chunk.js",
+    "static/js/2.56b35ba4.chunk.js.map": "/React-Testing-Library/static/js/2.56b35ba4.chunk.js.map",
+    "static/js/3.293db429.chunk.js": "/React-Testing-Library/static/js/3.293db429.chunk.js",
+    "static/js/3.293db429.chunk.js.map": "/React-Testing-Library/static/js/3.293db429.chunk.js.map",
+    "static/js/4.5a931f88.chunk.js": "/React-Testing-Library/static/js/4.5a931f88.chunk.js",
+    "static/js/4.5a931f88.chunk.js.map": "/React-Testing-Library/static/js/4.5a931f88.chunk.js.map",
+    "static/js/5.3f1af322.chunk.js": "/React-Testing-Library/static/js/5.3f1af322.chunk.js",
+    "static/js/5.3f1af322.chunk.js.map": "/React-Testing-Library/static/js/5.3f1af322.chunk.js.map",
+    "static/js/6.1a7d311e.chunk.js": "/React-Testing-Library/static/js/6.1a7d311e.chunk.js",
+    "static/js/6.1a7d311e.chunk.js.map": "/React-Testing-Library/static/js/6.1a7d311e.chunk.js.map",
+    "static/js/7.6dd45105.chunk.js": "/React-Testing-Library/static/js/7.6dd45105.chunk.js",
+    "static/js/7.6dd45105.chunk.js.map": "/React-Testing-Library/static/js/7.6dd45105.chunk.js.map",
+    "static/js/8.f24526bf.chunk.js": "/React-Testing-Library/static/js/8.f24526bf.chunk.js",
+    "static/js/8.f24526bf.chunk.js.map": "/React-Testing-Library/static/js/8.f24526bf.chunk.js.map",
+    "index.html": "/React-Testing-Library/index.html",
+    "static/js/2.56b35ba4.chunk.js.LICENSE.txt": "/React-Testing-Library/static/js/2.56b35ba4.chunk.js.LICENSE.txt",
+    "static/media/404error.a36e0e4b.png": "/React-Testing-Library/static/media/404error.a36e0e4b.png",
+    "static/media/box.76ab3121.png": "/React-Testing-Library/static/media/box.76ab3121.png",
+    "static/media/car.c3b67f11.png": "/React-Testing-Library/static/media/car.c3b67f11.png",
+    "static/media/darkmode.2c9ea98f.svg": "/React-Testing-Library/static/media/darkmode.2c9ea98f.svg",
+    "static/media/form.5c5891da.png": "/React-Testing-Library/static/media/form.5c5891da.png",
+    "static/media/gossip.297bd91c.png": "/React-Testing-Library/static/media/gossip.297bd91c.png",
+    "static/media/lightmode.0ef1b398.svg": "/React-Testing-Library/static/media/lightmode.0ef1b398.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.231a8f32.js",
+    "static/js/2.56b35ba4.chunk.js",
+    "static/js/main.0fb0ef0b.chunk.js"
+  ]
+}
