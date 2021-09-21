@@ -1,13 +1,11 @@
 import * as S from "./styles";
 
 import { Route, Switch } from "react-router-dom";
+import { Suspense, lazy } from "react";
 
 import { ReactComponent as DarkModeIcon } from "@/assets/darkmode.svg";
-import Home from "@/pages/Home";
 import { ReactComponent as LightModeIcon } from "@/assets/lightmode.svg";
-import LoadData from "@/components/LoadData";
-import NotFound from "@/components/NotFound";
-import SubmitForm from "@/components/SubmitForm/SubmitForm";
+import Spinner from "@/components/Spinner";
 import { THEME } from "@/constants/styles";
 import { ThemeProvider } from "styled-components";
 import useGlobalTheme from "@/hooks/useGlobalTheme";
@@ -15,15 +13,22 @@ import useGlobalTheme from "@/hooks/useGlobalTheme";
 function App() {
   const [theme, setTheme, themeString] = useGlobalTheme();
 
+  const Home = lazy(() => import("@/pages/Home"));
+  const SubmitForm = lazy(() => import("@/components/SubmitForm"));
+  const LoadData = lazy(() => import("@/components/LoadData"));
+  const NotFound = lazy(() => import("@/components/NotFound"));
+
   return (
     <ThemeProvider theme={theme}>
       <S.App>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route path="/submitForm" component={SubmitForm} />
-          <Route path="/loadData" component={LoadData} />
-          <Route component={NotFound} />
-        </Switch>
+        <Suspense fallback={<Spinner />}>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/submitForm" component={SubmitForm} />
+            <Route path="/loadData" component={LoadData} />
+            <Route component={NotFound} />
+          </Switch>
+        </Suspense>
         <S.ThemeChanger
           className="touchable"
           data-testid="touchable"
