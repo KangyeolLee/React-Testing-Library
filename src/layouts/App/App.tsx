@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import { Suspense, lazy } from "react";
 
 import { ReactComponent as DarkModeIcon } from "@/assets/darkmode.svg";
+import ErrorBoundary from "@/components/ErrorBoundary";
 import { ReactComponent as LightModeIcon } from "@/assets/lightmode.svg";
 import Spinner from "@/components/Spinner";
 import { THEME } from "@/constants/styles";
@@ -21,14 +22,16 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <S.App>
-        <Suspense fallback={<Spinner />}>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/submitForm" component={SubmitForm} />
-            <Route path="/loadData" component={LoadData} />
-            <Route component={NotFound} />
-          </Switch>
-        </Suspense>
+        <ErrorBoundary>
+          <Suspense fallback={<Spinner />}>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route path="/submitForm" component={SubmitForm} />
+              <Route path="/loadData" component={LoadData} />
+              <Route component={NotFound} />
+            </Switch>
+          </Suspense>
+        </ErrorBoundary>
         <S.ThemeChanger
           className="touchable"
           data-testid="touchable"
