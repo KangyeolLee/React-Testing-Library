@@ -20,7 +20,7 @@ const LoadData = () => {
           />
         </S.Article>
         <S.Article>
-          <Suspense fallback={<Spinner />}>
+          <Suspense fallback={<Spinner data-testid="test-spinner" />}>
             <SuspenseData />
           </Suspense>
         </S.Article>
