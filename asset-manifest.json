@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/React-Testing-Library/static/js/main.0fb0ef0b.chunk.js",
-    "main.js.map": "/React-Testing-Library/static/js/main.0fb0ef0b.chunk.js.map",
+    "main.js": "/React-Testing-Library/static/js/main.6c491fbe.chunk.js",
+    "main.js.map": "/React-Testing-Library/static/js/main.6c491fbe.chunk.js.map",
     "runtime-main.js": "/React-Testing-Library/static/js/runtime-main.231a8f32.js",
     "runtime-main.js.map": "/React-Testing-Library/static/js/runtime-main.231a8f32.js.map",
     "static/js/2.56b35ba4.chunk.js": "/React-Testing-Library/static/js/2.56b35ba4.chunk.js",
@@ -31,6 +31,6 @@
   "entrypoints": [
     "static/js/runtime-main.231a8f32.js",
     "static/js/2.56b35ba4.chunk.js",
-    "static/js/main.0fb0ef0b.chunk.js"
+    "static/js/main.6c491fbe.chunk.js"
   ]
 }
