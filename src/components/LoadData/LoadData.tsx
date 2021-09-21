@@ -1,6 +1,9 @@
 import * as S from "./styles";
 
 import Header from "@/components/Header";
+import Spinner from "@/components/Spinner";
+import { Suspense } from "react";
+import SuspenseData from "./SuspenseData";
 import gossip from "@/assets/gossip.png";
 
 const LoadData = () => {
@@ -17,7 +20,9 @@ const LoadData = () => {
           />
         </S.Article>
         <S.Article>
-          <h2>SUSPENSE를 이용한 선언적 비동기 처리</h2>
+          <Suspense fallback={<Spinner />}>
+            <SuspenseData />
+          </Suspense>
         </S.Article>
       </div>
     </S.LoadData>
